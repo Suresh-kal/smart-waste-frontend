@@ -60,10 +60,9 @@ function BinMap({ bins }) {
                 zoom={15}
                 className="h-full w-full"
             >
-
-               <TileLayer
-    attribution='&copy; OpenStreetMap contributors &copy; CARTO'
-    url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
+<TileLayer
+  attribution='&copy; OpenStreetMap contributors &copy; CARTO'
+  url={`https://basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png?key=${import.meta.env.VITE_CARTO_API_KEY}`}
 />
 
                 {bins.map((bin) => (
